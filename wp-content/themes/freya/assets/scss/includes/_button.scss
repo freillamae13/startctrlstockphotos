@@ -1,0 +1,83 @@
+.button {
+	background-color: #F9461C;
+	border: 0.2rem solid #F9461C;
+	color: #fff;
+	display: inline-block;
+	font-size: 1.8rem;
+	font-family: $font-bebasneue-bold;
+	letter-spacing: 0.1rem;
+	line-height: 1;
+	padding: 1rem 3rem;
+
+	@include transition(all 0.4s ease-out);
+
+	&:hover {
+		background-color: #fff;
+		border-color: #fff;
+		color: #F9461C;
+	}
+}
+
+.link {
+	color: #F9461C;
+	display: inline-block;
+	font-size: 1.6rem;
+	font-family: $font-montserrat-bold;
+	text-decoration: underline;	
+
+	@include transition(all 0.4s ease-out);
+
+	&:hover {
+		color: lighten(#F9461C, 15%);
+	}
+}
+
+.link-arrow {
+	color: #F9461C;
+	display: inline-block;
+	font-size: 1.6rem;
+	font-family: $font-montserrat-bold;
+	text-decoration: underline;	
+
+	&:after {
+		bottom: -0.2rem;
+		content: url('../images/arrow-right.svg');
+		margin-bottom: -0.5rem;
+		margin-left: 1rem;
+		position: relative;
+
+		@include transition(all 0.4s ease-out);
+	}
+
+	&:hover {
+		color: #F9461C;
+
+		&:after {
+			margin-left: 1.8rem;
+		}
+	}
+}
+
+.video-link {
+	@include flexbox();
+	@include flex-flow(row wrap);
+	@include align-items(center);
+
+	color: #F9461C;
+	font-family: $font-montserrat-bold;
+	font-size: 1.6rem;
+	line-height: 1;
+	opacity: 1;
+
+	@include transition(all 0.4s ease-out);
+
+	&:before {
+		content: url('../../assets/images/play-button-orange.png');
+		margin-right: 1rem;
+	}
+
+	&:hover {
+		color: #F9461C;
+		opacity: 0.5;
+	}
+}
