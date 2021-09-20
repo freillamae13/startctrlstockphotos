@@ -1,0 +1,136 @@
+{
+    "key": "group_6098ea4165a4c",
+    "title": "Page - Privacy Policy",
+    "fields": [
+        {
+            "key": "field_6098eaa45f695",
+            "label": "Privacy Policy",
+            "name": "privacy_policy",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6098eb865f69b": {
+                    "key": "layout_6098eb865f69b",
+                    "name": "flexspace",
+                    "label": "Flexspace",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6098eb8f5f69c",
+                            "label": "Flexspace",
+                            "name": "flexspace",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5de0ddcb0e7e7"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6098eab30e663": {
+                    "key": "layout_6098eab30e663",
+                    "name": "banner",
+                    "label": "Banner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6098eb275f698",
+                            "label": "Banner",
+                            "name": "banner",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5fd70ebe3b5da"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6098eba75f69d": {
+                    "key": "layout_6098eba75f69d",
+                    "name": "content_only",
+                    "label": "Content Only",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6098ebae5f69e",
+                            "label": "Content Only",
+                            "name": "content_only",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6090bc846634d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/privacy-policy.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1620634913
+}

@@ -1,0 +1,149 @@
+.header {
+	$this: &;
+
+	background-color: #fff;
+	box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05%);
+	left: 0;
+	height: 10rem;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 12;
+
+	&__logo {
+		img {
+			max-width: 18rem;
+		}
+
+	}
+
+	> .grid-x {
+		height: 100%;
+
+		> .cell {
+			height: 100%;
+
+			> .grid-x {
+				height: 100%;
+			}
+		}
+	}
+
+	&__menu {
+		@include breakpoint(large down) {
+			display: none;
+		}
+
+		li {
+			color: #000;
+			display: inline-block;
+			font-family: $font-roboto-bold;
+			font-weight: bold;
+			font-size: 1.4rem;
+			letter-spacing: 0.1rem;
+			line-height: 1;
+			margin-right: 3rem;
+			text-transform: none;
+
+			a {
+				color: inherit;
+				font: inherit;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			&#{$this}__menu-cta {
+				a {
+					&.button {
+						color: #fff;
+
+						&:hover {
+							color: #f9880d;
+						}
+					}
+
+					&.button--outline {
+						color: #f9880d;
+
+						&:hover {
+							color: #fff;
+						}
+					}
+
+					&.button--yellow {
+						color: #fff;
+	
+						&:hover {
+							background-color: transparent;
+							color: #FEC628;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__hamburger {
+		display: none;
+		cursor: pointer;
+
+		@include breakpoint(large down) {
+			display: block;
+		}
+
+		> div {
+			height: 2.2rem;
+			position: relative;
+			width: 3.6rem;
+
+			> div {
+				background-color: #000;
+				height: 0.2rem;
+				position: absolute;
+				width: 100%;
+
+				@include transition(all 0.4s ease-out);
+
+				&:first-child {
+					left: 50%;
+					top: 0;
+
+					@include transform(translate(-50%,0) rotate(0));
+
+					.hamburger-active & {
+						top: 50%;
+
+						@include transform(translate(-50%,-50%) rotate(45deg));
+					}
+				}
+
+				&:nth-child(2) {
+					left: 50%;
+					top: 50%;
+					width: 100%;
+
+					@include transform(translate(-50%,-50%));
+					
+					.hamburger-active & {
+						width: 0;
+					}
+				}
+
+				&:last-child {
+					bottom: 0;
+					left: 50%;
+
+					@include transform(translate(-50%,0) rotate(0));
+
+					.hamburger-active & {
+						top: 50%;
+
+						@include transform(translate(-50%,-50%) rotate(-45deg));
+					}
+				}
+			}
+		}
+	}
+}

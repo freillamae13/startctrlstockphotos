@@ -1,0 +1,314 @@
+// Container Styling
+
+html,
+body {
+	background-color: #fff;
+	font-size: 62.5%;
+	-webkit-text-size-adjust: none; /* 2 */
+	-ms-text-size-adjust: none; /* 2 */
+}
+
+:focus {
+	outline: 0;
+}
+
+.grid-container {
+	max-width: 144rem;
+	padding: 0;
+}
+
+// Text Styling
+
+h1 {
+	font-size: 5rem;
+	line-height: 1;
+
+	a {
+		color: inherit;
+		font: inherit;
+	}
+}
+
+h2 {
+	font-size: 3.5rem;
+	line-height: 1;
+
+	a {
+		color: inherit;
+		font: inherit;
+	}
+}
+
+h3 {
+	font-size: 2.5rem;
+	line-height: 1;
+
+	a {
+		color: inherit;
+		font: inherit;
+	}
+}
+
+h4 {
+	font-size: 2.2rem;
+	line-height: 1;
+
+	a {
+		color: inherit;
+		font: inherit;
+	}
+}
+
+h5 {
+	font-size: 2rem;
+	line-height: 1;
+
+	a {
+		color: inherit;
+		font: inherit;
+	}
+}
+
+h6 {
+	font-size: 1.8rem;
+	line-height: 1;
+
+	a {
+		color: inherit;
+		font: inherit;
+	}
+}
+
+p {
+	color: #262626;
+	font-family: $font-roboto-regular;
+	font-size: 1.8rem;
+	line-height: 1.6;
+	margin-bottom: 3rem;
+
+	@include breakpoint(small only) {
+		font-size: 1.6rem;
+	}
+
+	a {
+		color: inherit;
+		font: inherit;
+		text-decoration: underline;
+
+		@include transition(all 0.4s ease);
+
+		&:hover {
+			color: lighten(#262626, 30%);
+		}
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+strong {
+	color: #EFC830;
+	font-size: 1.8rem;
+}
+
+a {
+
+}
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+
+	li {
+
+		font-size: 1.8rem;
+		line-height: 1.6;
+
+		a {
+			color: inherit;
+			font: inherit;
+		}
+	}
+}
+
+ol {
+	li {
+		list-style: decimal;
+	}
+}
+
+form {
+	position: relative;
+}
+
+input,
+textarea {
+	border-radius: 0;
+	outline: none;
+
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: #000;
+	}
+
+	&::-moz-placeholder { /* Firefox 19+ */
+		color: #000;
+	}
+
+	&:-ms-input-placeholder { /* IE 10+ */
+		color: #000;
+	}
+
+	&:-moz-placeholder { /* Firefox 18- */
+		color: #000;
+	}
+
+	&:focus {
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			opacity: 0;
+		}
+
+		&::-moz-placeholder { /* Firefox 19+ */
+			opacity: 0;
+		}
+
+		&:-ms-input-placeholder { /* IE 10+ */
+			opacity: 0;
+		}
+
+		&:-moz-placeholder { /* Firefox 18- */
+			opacity: 0;
+		}
+	}
+}
+
+// Visibility Setting
+
+.visuallyhidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 0.1rem !important; 
+	width: 0.1rem !important; 
+	overflow: hidden;
+}
+
+// Flexspace
+
+.flexspace {
+	&.desktop {
+		@include breakpoint(medium down) {
+			display: none;
+		}
+	}
+
+	&.tablet {
+		display: none;
+
+		@include breakpoint(medium only) {
+			display: block;
+		}
+
+		@include breakpoint(small only) {
+			display: none;
+		}
+	}
+
+	&.mobile {
+		display: none;
+
+		@include breakpoint(medium only) {
+			display: none;
+		}
+
+		@include breakpoint(small only) {
+			display: block;
+		}
+	}
+}
+
+// Dropanchor
+
+.dropanchor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+// Image
+
+img {
+	-webkit-backface-visibility: hidden; /* Safari */
+  	backface-visibility: hidden;
+	max-width: 100%;
+	width: auto;
+
+	&:not([src]):not([srcset]) {
+		visibility: hidden;
+	}	
+}
+
+// Form
+
+.form {
+	&__input {
+		input {
+			background-color: transparent;
+			border: 0;
+			border-bottom: 0.1rem solid #262626;
+	
+			font-size: 1.5rem;
+			padding: 1rem 0;
+		}
+	}
+
+	&__submit {
+		input {
+			background-color: #2ACCFD;
+			border: 0.1rem solid #2ACCFD;
+			border-radius: 4rem;
+			color: #fff;
+			cursor: pointer;
+	
+			font-size: 1.5rem;
+			min-width: 12.5rem;
+			padding: 1rem;
+		}
+	}
+}
+
+// Contact Form 7
+
+.screen-reader-response {
+	display: none;
+}
+
+.wpcf7-response-output {
+	font-size: 1.5rem;
+	line-height: 1.2;
+	margin-top: 3rem;
+}
+
+.wpcf7-not-valid-tip {
+	bottom: 2.5rem;
+	font-size: 1.5rem;
+	left: 0;
+	line-height: 1.2;
+	position: absolute;
+}
+
+.wpcf7-response-output--invalid,
+.wpcf7-response-output--failed,
+.wpcf7-response-output--spam,
+.wpcf7-not-valid-tip {
+	color: #e62626260;
+}
+
+.wpcf7-response-output--success {
+	color: #00bf00;
+}

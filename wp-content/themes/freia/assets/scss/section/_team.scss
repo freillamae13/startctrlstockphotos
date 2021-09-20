@@ -1,0 +1,215 @@
+.team {
+	$this: &;
+
+	// Default
+
+	&__d-items {
+		margin-left: -3rem;
+		width: calc(100% + 6rem);
+
+		@include breakpoint(small only) {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
+	&__d-item {
+		margin-bottom: 5rem;
+		padding: 0 3rem;
+
+		@include breakpoint(small only) {
+			padding: 0;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__d-item-image {
+		margin-bottom: 2rem;
+	}
+
+	&__d-item-image-wrapper {
+		display: inline-block;
+		position: relative;
+
+		&:before {
+			background-image: url('../images/team-pattern.png');
+			bottom: 0;
+			content: '';
+			position: absolute;
+			height: 5.7rem;
+			right: 0;
+			width: 5.8rem;
+		}
+
+		img {
+			box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.25);
+			border-radius: 50%;
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	&__d-item-name {
+		color: #000;
+		font-family: $font-ubuntu-regular;
+		font-size: 3rem;
+		line-height: 1;
+		margin-bottom: 1.5rem;
+	}
+
+	&__d-item-description {
+		@include breakpoint(small only) {
+			padding: 0 10%;
+		}
+
+		p {
+			font-size: 1.4rem;
+		}
+	}
+
+	// Group
+
+	&__g {
+		margin-bottom: 10rem;
+
+		@include breakpoint(medium down) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__g-title {
+		color: #000;
+		font-family: $font-ubuntu-regular;
+		font-size: 4.6rem;
+		line-height: 1.1;
+		margin-bottom: 3rem;
+
+		@include flex(0 1 auto);
+		@include align-self(flex-start);
+	}
+
+	&__g-items {
+		@include breakpoint(medium down) {
+			margin-bottom: 10rem;
+		}
+
+		@include breakpoint(small only) {
+			margin-bottom: 0;
+		}
+
+		> .grid-x {
+			@include flexbox();
+			@include flex-flow(row wrap);
+
+			height: 100%;
+		}
+	}
+
+	&__g-item {
+		@include flex(0 1 auto);
+		@include align-self(flex-start);
+
+		padding: 0;
+
+		@include breakpoint(small only) {
+			margin-bottom: 5rem;
+			padding: 0;
+		}
+	}
+
+	&__g-title-box {
+		min-height: 13rem;
+		@include breakpoint (large down) {
+			min-height: 10rem;
+		}
+		@include breakpoint (medium down) {
+			min-height: 0;
+		}
+		@include breakpoint (small down) {
+			margin-top: 5rem;
+		}
+	}
+
+	&__g-item-box {
+		width: 30rem;
+		@include breakpoint (large down) {
+			width: 15rem;
+			margin: 0 auto;
+		}
+		@include breakpoint (medium down) {
+			width: 100%;
+		}
+	}
+
+	&__g-item-content {
+		position: relative;
+		@include breakpoint (large down) {
+			min-height: 15rem;
+		}
+		@include breakpoint (medium down) {
+			min-height: 0;
+		}
+	}
+
+	&__g-item-image {
+		margin-bottom: 2rem;
+	}
+
+	&__g-item-image-wrapper {
+		display: inline-block;
+		position: relative;
+
+		&:before {
+			background-image: url('../images/team-pattern.png');
+			bottom: 0;
+			content: '';
+			position: absolute;
+			height: 5.7rem;
+			right: 0;
+			width: 5.8rem;
+		}
+
+		img {
+			box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.25);
+			border-radius: 50%;
+			position: relative;
+			z-index: 2;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__g-item-name {
+		color: #000;
+		font-family: $font-ubuntu-regular;
+		font-size: 2.8rem;
+		line-height: 1;
+		margin-bottom: 2rem;
+	}
+
+	&__g-item-social {
+		padding-top: 5rem;
+		li {
+			display: inline-block;
+			line-height: 1;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+
+			a {
+				background-color: #0076b4;
+				border-radius: 50%;
+				color: #fff;
+				display: block;
+				font-size: 2.6rem;
+				height: 4.2rem;
+				line-height: 4.4rem;
+				width: 4.2rem;
+			}
+		}
+	}
+}

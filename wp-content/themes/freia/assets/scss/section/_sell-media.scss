@@ -1,0 +1,8 @@
+.sell-media {
+  &-grid-item-container {
+    width: 100%;
+    & > div {
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,461 @@
+.blog-detail {
+	$this: &;
+
+	width: 100%;
+	margin-bottom: 10rem;
+
+	@include breakpoint(medium down) {
+		margin-bottom: 5rem;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	ul {
+		margin-bottom: 2rem;
+	}
+
+	ul,
+	ol {
+		li {
+			font-size: 1.8rem;
+			list-style: disc;
+			list-style-position: outside;
+			margin-bottom: 1rem;
+			margin-left: 2rem;
+			text-indent: 0;
+			font-family: $font-roboto-regular;
+			@include breakpoint (large down) {
+				font-size: 1.6rem;
+			}
+		}
+    }
+    
+    &__header--container {
+        margin-bottom: 5rem;
+        background-color: $yellow;
+        padding: 2.5rem 0;
+        position: relative;
+        
+    }
+
+	&__header {
+        position: relative;
+        z-index: 2;
+
+		time {
+			font-family: inherit;
+			font-size: 1.8rem;
+			color: #000;
+			letter-spacing: 0;
+			line-height: 1.2;
+			margin-bottom: 2rem;
+			display: block;
+		}
+	}
+
+    &__header--wrapper {
+        margin-top: 15rem;
+        @include breakpoint (small only) {
+            margin-top: 12rem;
+        }
+    }
+
+    &__pattern-background {
+        @media (max-width: 835px) {
+            height: 0;
+        }
+    }
+
+    &__single-container {
+        margin-top: 5rem;
+        @include breakpoint (small only) {
+            margin-top: 0;
+        }
+    }
+
+	&__detailbox {
+		padding-right: 3vw;
+
+		#{$this}--full & {
+			padding-right: 0;
+		}
+
+		@include breakpoint(medium down) {
+			padding-right: 0;
+			margin-bottom: 5rem;
+		}
+		@include breakpoint (small only) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 1rem;
+		font-family: $font-ubuntu-regular;
+		font-size: 4.8rem !important;
+		color: #000;
+		letter-spacing: 0.1rem;
+		line-height: 5.7rem;
+		max-width: 60rem;
+
+		@include breakpoint(xlarge down) {
+			max-width: 50rem;
+		}
+
+		@include breakpoint(medium down) {
+			font-size: 3.8rem !important;
+			max-width: 100%;
+			line-height: 1.1;
+			margin-top: 1.5rem;
+		}
+    }
+    
+    
+    &__reading-time {
+        font-size: 1.4rem;
+        font-family: $font-roboto-bold;
+        text-transform: uppercase;
+        line-height: 2.1rem;
+        letter-spacing: 0.3rem;
+        padding-bottom: 2rem;
+        @include breakpoint (medium down) {
+            margin-left: 0;
+            padding: 0;
+        }
+    }
+
+    &__author {
+        font-family: $font-roboto-regular;
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+        margin: 4rem 0 1rem;
+    }
+
+	&__imagebox {
+		margin-bottom: 4rem;
+        position: relative;
+		@include breakpoint(small only) {
+			margin-bottom: 2rem;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+    &__image--wrapper {
+        @extend %background-image;
+        min-height: 30rem;
+        position: relative;
+        z-index: 3;
+        border-radius: 10px;
+        width: 53rem;
+        top: 3rem;
+
+        @include breakpoint (large down) {
+            width: 40rem;
+            top: -1rem;
+        }
+
+        @media (max-width: 835px) {
+            width: 90%;
+            top: 4rem;
+        }
+
+        @include breakpoint (small only) {
+            margin: 0 auto;
+            min-height: 20rem;
+        }
+    }
+
+    &__image--decor {
+        &-1 {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            border: 3px solid $white;
+            position: absolute;
+            top: 1rem;
+            left: 10rem;
+            img {
+                width: 90%;
+            }
+            @include breakpoint (large down) {
+                left:10rem;
+                top: -3rem;
+            }
+            @media (max-width: 835px) {
+                display: none;
+            }
+        }
+        &-2 {
+            position: absolute;
+            top: 0;
+            right: 5rem;
+            @include breakpoint (large down) {
+                top: -4rem;
+                right: 3rem;
+            }
+            @media (max-width: 835px) {
+                display: none;
+            }
+        }
+        &-3 {
+            position: absolute;
+            bottom: -9rem;
+            left: -2rem;
+            z-index: 2;
+            img {
+                width: 90%;
+            }
+            @include breakpoint (large down) {
+                bottom: -5rem;
+                left: -2rem;
+            }
+            @media (max-width: 835px) {
+                display: none;
+            }
+        }
+    }
+
+	&__content {
+		p {
+			margin-bottom: 4rem;
+			font-family: $font-roboto-regular;
+			font-size: 1.6rem;
+			line-height: 1.6;
+			@include breakpoint (large down) {
+				font-size: 1.6rem;
+			}
+
+			a {
+					font-family: inherit;
+			}
+			ul {
+				margin-bottom: 4rem;
+				li {
+					list-style-position: inside;
+				}
+			}
+		}
+		h1,h2,h3,h4,h5,h6{
+			font-family: $font-ubuntu-regular;
+			font-size: 2.4rem;
+			color: $black;
+		}
+		b,strong {
+			color: $black;
+			font-size: 1.6rem;
+		}
+		//wordpress generated image class
+		img.alignright {float:right; margin:0 0 1em 1em}
+		img.alignleft {float:left; margin:0 1em 1em 0}
+		img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+		a img.alignright {float:right; margin:0 0 1em 1em}
+		a img.alignleft {float:left; margin:0 1em 1em 0}
+		a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+	}
+
+	&__social {
+		@include flexbox();
+		@include flex-flow(row wrap);
+		margin-bottom: 6rem !important;
+
+		@include breakpoint(small only) {
+			margin-bottom: 0 !important;
+		}
+
+		#{$this}__header.text-center & {
+			@include justify-content(center);
+		}
+
+		li {
+			color: $black;
+			font-size: 2rem !important;
+			flex: 0 0 auto;
+			padding-right: 2rem;
+			list-style: none !important;
+			margin-bottom: 0 !important;
+			margin-left: 0 !important;
+			text-indent: 0 !important;
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			@include breakpoint(medium down) {
+					padding-right: 1.5rem;
+			}
+
+			@include breakpoint(small down) {
+					padding-right: 1rem;
+			}
+		}
+	}
+
+	&__footer {
+		padding-top: 2rem;
+	}
+
+	&__related {
+		padding-left: 3vw;
+
+		#{$this}--full & {
+			padding-left: 0;
+		}
+
+		@include breakpoint(medium down) {
+				padding-left: 0;
+				width: 100%;
+		}
+	}
+
+	&__related-titlebox {
+		#{$this}--full & {
+			margin-top: 10rem;
+
+			@include breakpoint(small only) {
+				margin-top: 5rem;
+			}
+		}
+	}
+
+	&__related-title {
+		font-family: $font-roboto-bold !important;
+		font-size: 1.8rem !important;
+		text-transform: uppercase;
+		letter-spacing: 0.2rem;
+        color: #A9895B !important;
+	}
+
+	&__post {
+		margin-bottom: 4rem;
+		@include breakpoint (small only) {
+			margin-bottom: 0;
+		}
+
+		#{$this}--full & {
+			padding: 0 3rem;
+
+			@include breakpoint(small only) {
+				padding: 0;
+				
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+    &__download-wrapper {
+        width: 100%;
+        border-radius: 11px;
+        position: relative;
+        margin-bottom: 40px;
+        text-align: center;
+        padding: 40px;
+        background-color: #14B8BC;
+        a {
+            margin-top: 2rem;
+            border: none;
+			font-size: 1.6rem;       
+        }
+    }
+
+    &__download-title {
+        font-family: $font-ubuntu-regular;
+        font-size: 2.8rem;
+        line-height: 3.3rem;
+        text-align: center;
+        color: $white;
+    }
+
+    &__download-content {
+        font-family: $font-roboto-regular;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        text-align: center;
+        color: $white;
+    }
+
+	&__post-wrap {
+		position: relative;
+
+		@include breakpoint(medium down) {
+			padding: 2rem 2.5rem;
+		}
+		@include breakpoint (small only) {
+			padding: 2rem 0;
+		}
+	}
+
+	&__post-imagebox {
+		@extend %background-image;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56.25%;
+		@include breakpoint (small only) {
+			display: none;
+		}
+	}
+
+    &__item-content {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 10px 15px 0 rgba(0,0,0,.1);
+        background-color: $white;
+        max-height: 28rem;
+        padding: 2rem 4rem 2rem;
+        position: relative;
+		@include breakpoint (small only) {
+			border-radius: 10px;
+			box-shadow: 0 0 10px 5px rgba(0,0,0,.1);
+		}
+    }
+
+    &__item-category {
+        color: #FA733C;
+        font-family: $font-roboto-bold;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.3rem;
+        margin-top: 1rem;
+		text-transform: uppercase;
+    }
+
+	&__post-title {
+		color: #000;
+		font-family: $font-ubuntu-regular !important;
+		font-size: 2rem !important;
+		letter-spacing: 0;
+		margin-bottom: 1rem;
+	}
+
+	&__post-description {
+		display: -webkit-box;
+		height: 7.5rem;
+		margin-bottom: 3rem;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;  
+		overflow: hidden;
+
+		p {
+			font-family: inherit;
+		}
+	}
+
+	&__post-readmore {
+		a {
+			font-size: 1.5rem;
+			font-family: inherit;
+			text-transform: uppercase;
+		}
+	}
+}

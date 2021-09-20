@@ -1,0 +1,197 @@
+.photo-content {
+	$this: &;
+
+	// Default
+
+	&__d-image {
+		@include breakpoint(medium down) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__d-content {
+		padding-left: 10rem;
+
+		.flex-dir-row-reverse & {
+			padding-left: 0;
+			padding-right: 10rem;
+			@include breakpoint(medium down) {
+				padding-right: 2rem;
+			}
+
+			@include breakpoint(small only) {
+				padding: 0;
+			}
+		}
+
+		@include breakpoint(medium down) {
+			padding-left: 2rem;
+		}
+		@include breakpoint (small only) {
+			padding: 0;
+		}
+	}
+
+	&__d-title {
+		font-family: $font-ubuntu-regular;
+		font-size: 4.8rem;
+		line-height: 1;
+		margin-bottom: 2.5rem;
+	}
+
+	&__d-il-item {
+		@include flexbox();
+		@include align-items(flex-start);
+		@include flex-flow(row wrap);
+
+		margin-bottom: 3rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__d-il-icon {
+		@include flex(0 1 auto);
+
+		text-align: center;
+		width: 3rem;
+
+		svg {
+			color: #000;
+			font-size: 2.4rem;
+		}
+	}
+	
+	&__d-il-text {
+		@include flex(0 1 auto);
+
+		padding-left: 2rem;
+		width: calc(100% - 3rem);
+	}
+
+	// Centered
+
+	&__c-title {
+		font-family: $font-ubuntu-regular;
+		font-size: 4.8rem;
+		line-height: 1;
+		margin-bottom: 2.5rem;
+	}
+
+	&__c-image {
+		@include order(2);
+
+		padding: 4rem 0.5rem;
+
+		@include breakpoint(medium down) {
+			@include order(1);
+
+			margin-bottom: 4rem;
+			padding: 0;
+		}
+	}
+
+	&__c-column-items {
+		margin: 4rem auto 0;
+		width: 85%;
+
+		@include breakpoint(medium down) {
+			margin-left: -1rem;
+			padding: 0 2rem;
+			width: calc(100% + 2rem);
+		}
+
+		@include breakpoint(small only) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&__c-column-item-group-left {
+		@include order(1);
+
+		@include flexbox();
+		@include flex-flow(row wrap);
+		@include justify-content(center);
+		
+		@include breakpoint(small only) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&__c-column-item-group-right {
+		@include order(3);
+
+		@include flexbox();
+		@include flex-flow(row wrap);
+		@include justify-content(center);
+	}
+	
+	&__c-column-item-group-mobile {
+		@include order(1);
+		@include flexbox();
+		@include flex-flow(row wrap);
+		@include align-items(center);
+
+		#{$this}__c-column-item {
+			padding: 0 2rem;
+			width: 50%;
+
+			@include breakpoint(small only) {
+				padding: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	&__c-column-item {
+		@include flex(0 1 auto);
+
+		@include breakpoint(medium down) {
+			margin-bottom: 4rem;
+		}
+
+		&:first-child {
+			@include align-self(flex-start);
+		}
+
+		&:last-child {
+			@include align-self(flex-end);
+
+			@include breakpoint(medium down) {
+				@include align-self(flex-start);
+			}
+
+			@include breakpoint(small only) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__c-column-item-image {
+		@include flexbox();
+		@include flex-flow(row wrap);
+		@include justify-content(center);
+		@include align-items(center);
+
+		height: 5.9rem;
+		margin-bottom: 1rem;
+	}
+
+	&__c-column-item-title {
+		font-family: $font-ubuntu-regular;
+		font-size: 3.2rem;
+		line-height: 1;
+		margin-bottom: 1rem;
+	}
+
+	&__c-column-item-text {
+		p {
+			font-size: 1.4rem;
+		}
+	}
+
+	&__c-link {
+		margin-top: 4rem;
+	}
+}

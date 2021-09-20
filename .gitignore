@@ -1,3 +1,29 @@
+.htaccess
+.history/
+wp-config.php
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+sitemap.xml
+*.log
+wp-config.php
+wp-content/cache/
+wp-content/backups/
+sitemap.xml.gz
+node_modules/
+
+##################################
+# W3 Total Cache untracked files #
+##################################
+wp-content/advanced-cache.php
+wp-content/db.php
+wp-content/object-cache.php
+wp-content/cache/
+wp-content/w3tc-config/
+
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
 
@@ -10,6 +36,7 @@ wp-content/*
 
 # ignore these plugins
 wp-content/plugins/hello.php
+wp-content/plugins/popup-maker/assets/sounds/
 
 # ignore specific themes
 wp-content/themes/twenty*/

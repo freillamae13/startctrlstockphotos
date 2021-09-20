@@ -1,0 +1,139 @@
+.newsletter {
+	$this: &;
+
+	margin-bottom: -12rem;
+
+	@include breakpoint(medium down) {
+		margin-bottom: 0;
+	}
+
+	> div {
+		position: relative;
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__wrapper-inner {
+		position: relative;
+		z-index: 2;
+
+		> .grid-x {
+			position: relative;
+			padding: 6rem 8rem;
+			z-index: 2;
+		}
+	}
+
+	&__pattern-wrapper {
+		background-color: #F9880D;
+		border-radius: 1.7rem;
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+		@include breakpoint(medium down) {
+			border-radius: 0;
+			padding: 4rem 4.17%;
+		}
+	}
+
+	&__pattern {
+		position: absolute;
+		top: 50%;
+
+		@include transform(translateY(-50%));
+	}
+
+	&__pattern--left {
+		left: 0;
+
+		@include breakpoint(medium down) {
+			display: none;
+		}
+	}
+
+	&__pattern--right {
+		right: 0;
+	}
+
+	&__illustration {
+		position: absolute;
+
+		@include breakpoint(medium down) {
+			display: none;
+		}
+	}
+
+	&__illustration--1 {
+		bottom: 0;
+    	left: -10.4rem;
+	}
+
+	&__illustration--2 {
+		bottom: 12rem;
+    	right: -11rem;
+	}
+
+	&__illustration--3 {
+		bottom: 0;
+		right: 0;
+	}
+
+	&__content {
+		padding-right: 10rem;
+
+		@include breakpoint(medium down) {
+			padding-right: 0;
+			width: 50% !important;
+		}
+		
+		@include breakpoint(small only) {
+			width: 100% !important;
+		}
+	}
+
+	&__title {
+		color: #fff;
+		font-family: $font-ubuntu-regular;
+		font-size: 6rem;
+		line-height: 1.2;
+		margin-bottom: 1rem;
+
+		@include breakpoint(1280 down) {
+			font-size: 5rem;
+		}
+
+		@include breakpoint(medium down) {
+			font-size: 4.2rem;
+		}
+	}
+
+	&__text {
+		p {
+			color: #fff;
+		}
+	}
+
+	&__link {
+		z-index: 2;
+
+		@include breakpoint(medium down) {
+			margin-top: 2rem;
+			text-align: center;
+			width: 50% !important;
+
+			@include breakpoint(small only) {
+				width: 100% !important;
+			}
+
+			img {
+				max-width: 17.5rem;
+			}
+		}
+	}
+}

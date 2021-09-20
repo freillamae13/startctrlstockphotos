@@ -1,0 +1,474 @@
+.column-content {
+	$this: &;
+
+	position: relative;
+
+	&__pattern {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&--background-pattern {
+		background-color: #FDFBE2;
+		padding: 5rem 0 10rem;
+
+		@include breakpoint(large down) {
+			padding: 5rem 0;
+		}
+
+		@include breakpoint(small only) {
+			padding: 5rem 0 10rem;
+		}
+	}
+
+	// Default
+
+	&__d {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__d-title {
+		color: #000;
+		font-family: $font-ubuntu-regular;
+		font-size: 4.8rem;
+		line-height: 1.3;
+		margin-bottom: 5rem;
+		padding: 0 18%;
+
+		@include breakpoint(large down) {
+			padding: 0 2%;
+		}
+
+		@include breakpoint(medium down) {
+			padding: 0;
+		}
+
+		@include breakpoint(small only) {
+			font-size: 3.2rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__d-items {
+		margin-left: -10rem;
+		width: calc(100% + 20rem);
+
+		@include breakpoint(large down) {
+			margin-left: -5rem;
+			width: calc(100% + 10rem);
+		}
+
+		@include breakpoint(medium down) {
+			margin-left: -2rem;
+			width: calc(100% + 4rem);
+		}
+
+		@include breakpoint(small only) {
+			margin-left: 0;
+			width: 100%;
+		}
+
+		#{$this}--background-pattern & {
+			margin-left: -2rem;
+			width: calc(100% + 4rem);
+
+			@include breakpoint(small only) {
+				margin-left: 0;
+				width: 100%;
+			}
+		}
+
+		#{$this}__d--circle-border & {
+			margin-left: -5rem;
+			width: calc(100% + 10rem);
+
+			@include breakpoint(large down) {
+				margin-left: -2rem;
+				width: calc(100% + 4rem);
+			}
+
+			@include breakpoint(small only) {
+				margin-left: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	&__d-item {
+		margin-bottom: 4rem;
+		padding: 0 10rem;
+
+		@include breakpoint(large down) {
+			padding: 0 5rem;
+		}
+
+		@include breakpoint(medium down) {
+			padding: 0 2rem;
+		}
+
+		@include breakpoint(small only) {
+			padding: 0 6rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include breakpoint(320 down) {
+			padding: 0 3rem;
+		}
+
+		#{$this}--background-pattern & {
+			padding: 0 2rem;
+
+			@include breakpoint(medium down) {
+				margin-bottom: 6rem;
+			}
+	
+			@include breakpoint(small only) {
+				padding: 0;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		#{$this}__d--circle-border & {
+			padding: 0 5rem;
+			margin-bottom: 6rem;
+
+			@include breakpoint (large down) {
+				padding: 0 2rem;
+			}
+
+			@include breakpoint(small only) {
+				padding: 0;
+			}
+		}
+	}
+
+	&__d-item-image {
+		height: 14.8rem;
+		margin-bottom: 1rem;
+
+		@include flexbox();
+		@include flex-flow(row wrap);
+		@include align-items(center);
+		@include justify-content(center);
+
+		#{$this}__d--circle-border & {
+			height: auto;
+			margin-bottom: 3rem;
+
+			img {
+				border-radius: 50%;
+				border: 0.2rem solid #C4C4C4;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+
+	&__d-item-title {
+		font-family: $font-ubuntu-regular;
+		font-size: 3.2rem;
+		line-height: 1;
+	}
+
+	&__d-item-text {
+		margin-top: 2rem;
+
+		p {
+			font-size: 1.4rem;
+		}
+	}
+
+	// Column Numbers
+
+	&__n {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__n-title {
+		color: #000;
+		font-family: $font-ubuntu-regular;
+		font-size: 4.8rem;
+		line-height: 1.3;
+		margin-bottom: 5rem;
+		padding: 0 10%;
+
+		@include breakpoint(large down) {
+			padding: 0 2%;
+		}
+
+		@include breakpoint(medium down) {
+			padding: 0;
+		}
+
+		@include breakpoint(small only) {
+			font-size: 3.2rem;
+			margin-bottom: 6rem;
+		}
+	}
+
+	&__n-items {
+		margin-left: -10rem;
+		width: calc(100% + 20rem);
+
+		@include breakpoint(large down) {
+			margin-left: -5rem;
+			width: calc(100% + 10rem);
+		}
+
+		@include breakpoint(medium down) {
+			margin-left: -2rem;
+			width: calc(100% + 4rem);
+		}
+
+		@include breakpoint(small only) {
+			margin-left: 0;
+			width: 100%;
+		}
+
+		#{$this}--background-pattern & {
+			margin-left: -2rem;
+			width: calc(100% + 4rem);
+
+			@include breakpoint(small only) {
+				margin-left: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	&__n-item {
+		margin-bottom: 4rem;
+		padding: 0 10rem;
+
+		@include breakpoint(large down) {
+			padding: 0 5rem;
+		}
+
+		@include breakpoint(medium down) {
+			padding: 0 2rem;
+		}
+
+		@include breakpoint(small only) {
+			padding: 0 6rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include breakpoint(320 down) {
+			padding: 0 3rem;
+		}
+
+		#{$this}--background-pattern & {
+			padding: 0 2rem;
+
+			@include breakpoint (1900 up) {
+				padding-bottom: 4rem;
+			}
+
+			@include breakpoint(medium down) {
+				margin-bottom: 6rem;
+			}
+	
+			@include breakpoint(small only) {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__n-item-number {
+		background-color: #FEC628;
+		border-radius: 50%;
+		color: #14B8BC;
+		display: inline-block;
+		font-family: $font-ubuntu-regular;
+		font-size: 9.6rem;
+		height: 13.8rem;
+		line-height: 13.8rem;
+		margin-bottom: 3rem;
+		width: 13.8rem;
+	}
+
+	&__n-item-title {
+		font-family: $font-ubuntu-regular;
+		font-size: 3.2rem;
+		line-height: 1;
+		margin-bottom: 0;
+	}
+
+	// Quote
+
+	&__q {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__q-title {
+		color: #000;
+		font-family: $font-ubuntu-regular;
+		font-size: 4.8rem;
+		line-height: 1.3;
+		margin-bottom: 4rem;
+
+		@include breakpoint(small only) {
+			font-size: 3.2rem;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__q-items {
+		width: calc(100% - 10rem);
+		margin: 0 auto;
+
+		@include breakpoint (large down) {
+			margin-left: -1rem;
+			width: calc(100% + 2rem);
+		}
+
+
+		@include breakpoint(small only) {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
+	&__q-item {
+		margin-bottom: 3rem;
+		padding: 0 1rem;
+
+		@include breakpoint(small only) {
+			padding: 0;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__q-item-wrapper {
+		border-bottom-left-radius: 1.5rem;
+		border-bottom-right-radius: 1.5rem;
+		box-shadow: 0.3rem 0.3rem 2.5rem rgba(0, 0, 0, 0.15);
+		min-height: 100%;
+		padding: 2.5rem 3rem;
+	}
+
+	&__q-item-image {
+		height: 14.8rem;
+		margin-bottom: 1rem;
+
+		@include flexbox();
+		@include flex-flow(row wrap);
+		@include align-items(center);
+		@include justify-content(center);
+
+		#{$this}__d--circle-border & {
+			height: auto;
+		}
+	}
+
+	&__q-item-quote {
+		p {
+			font-family: $font-ubuntu-regular;
+			font-size: 2.4rem;
+			line-height: 1.3;
+		}
+	}
+
+	// Image Pattern
+
+	&__ip-items {
+		width: calc(100% - 8rem);
+		margin: 0 auto;
+		@include breakpoint (large down) {
+			margin-left: -3rem;
+			width: calc(100% + 6rem);
+		}
+
+
+		@include breakpoint(small only) {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
+	&__ip-item {
+		@include breakpoint(medium down) {
+			margin-bottom: 5rem;
+		}
+
+		@include breakpoint(small only) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__ip-item-image {
+		position: relative;
+
+		img {
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	&__ip-item-pattern {
+		bottom: -1.5rem;
+		left: -1.5rem;
+		position: absolute;
+	}
+
+	&__ip-item-title {
+		font-family: $font-ubuntu-regular;
+		font-size: 3.2rem;
+		line-height: 1.3;
+		margin-top: 2rem;
+	}
+
+	&__ip-item {
+		padding: 0 3rem;
+	}
+
+	// Logo
+
+	&__l-title {
+		color: #000;
+		font-family: $font-ubuntu-regular;
+		font-size: 6.6rem;
+		line-height: 1;
+		margin-bottom: 6rem;
+
+		@include breakpoint(medium down) {
+			font-size: 5.4rem;
+		}
+	}
+
+	&__l-row {
+		> .grid-x {
+			margin-left: -3rem;
+			width: calc(100% + 6rem);
+		}
+	}
+
+	&__l-item {
+		margin-bottom: 5rem;
+		padding: 0 3rem;
+	}
+}
