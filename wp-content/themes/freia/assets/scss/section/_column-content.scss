@@ -37,7 +37,7 @@
 
 	&__d-title {
 		color: #000;
-		font-family: $font-ubuntu-regular;
+		font-family: $font-roboto-regular;
 		font-size: 4.8rem;
 		line-height: 1.3;
 		margin-bottom: 5rem;
@@ -179,7 +179,7 @@
 	}
 
 	&__d-item-title {
-		font-family: $font-ubuntu-regular;
+		font-family: $font-roboto-regular;
 		font-size: 3.2rem;
 		line-height: 1;
 	}
@@ -201,7 +201,7 @@
 
 	&__n-title {
 		color: #000;
-		font-family: $font-ubuntu-regular;
+		font-family: $font-roboto-regular;
 		font-size: 4.8rem;
 		line-height: 1.3;
 		margin-bottom: 5rem;
@@ -299,7 +299,7 @@
 		border-radius: 50%;
 		color: #14B8BC;
 		display: inline-block;
-		font-family: $font-ubuntu-regular;
+		font-family: $font-roboto-regular;
 		font-size: 9.6rem;
 		height: 13.8rem;
 		line-height: 13.8rem;
@@ -308,7 +308,7 @@
 	}
 
 	&__n-item-title {
-		font-family: $font-ubuntu-regular;
+		font-family: $font-roboto-regular;
 		font-size: 3.2rem;
 		line-height: 1;
 		margin-bottom: 0;
@@ -323,7 +323,7 @@
 
 	&__q-title {
 		color: #000;
-		font-family: $font-ubuntu-regular;
+		font-family: $font-roboto-regular;
 		font-size: 4.8rem;
 		line-height: 1.3;
 		margin-bottom: 4rem;
@@ -387,7 +387,7 @@
 
 	&__q-item-quote {
 		p {
-			font-family: $font-ubuntu-regular;
+			font-family: $font-roboto-regular;
 			font-size: 2.4rem;
 			line-height: 1.3;
 		}
@@ -436,7 +436,7 @@
 	}
 
 	&__ip-item-title {
-		font-family: $font-ubuntu-regular;
+		font-family: $font-roboto-regular;
 		font-size: 3.2rem;
 		line-height: 1.3;
 		margin-top: 2rem;
@@ -450,7 +450,7 @@
 
 	&__l-title {
 		color: #000;
-		font-family: $font-ubuntu-regular;
+		font-family: $font-roboto-regular;
 		font-size: 6.6rem;
 		line-height: 1;
 		margin-bottom: 6rem;
@@ -470,5 +470,13 @@
 	&__l-item {
 		margin-bottom: 5rem;
 		padding: 0 3rem;
+	}
+}
+
+// NEW
+.column-content {
+	$this: &;
+	&__image {
+		padding: 1.5rem;
 	}
 }

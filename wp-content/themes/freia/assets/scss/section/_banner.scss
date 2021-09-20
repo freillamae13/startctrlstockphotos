@@ -1,305 +1,46 @@
 .banner {
 	$this: &;
-	
-	// background-color: #FEC628;
-	position: relative;
-
-	&--height-auto {
-		height: auto;
-	}
-
-	&--height-100 {
-		height: 100vh;
-	}
-
-	&--height-90 {
-		height: 90vh;
-	}
-
-	&--height-80 {
-		height: 80vh;
-	}
-
-	&--height-70 {
-		height: 70vh;
-	}
-
-	&--height-60 {
-		height: 60vh;
-	}
-
-	&--height-50 {
-		height: 50vh;
-	}
-
-	@include breakpoint(small only) {
-		height: auto;
-	}
-
-	> .grid-x {
-		height: 100%;
-		position: relative;
-		z-index: 2;
-	}
-
-	&__pattern {
-		bottom: -0.5rem;
-		left: 0;
-		position: absolute;
+	height: 60vh;
+	&__full {
 		width: 100%;
-
-		@include breakpoint(small only) {
-			bottom: 0;
-			left: -80%;
-			width: 180%;
-		}
-
-		img {
-			display: block;
-			width: 100%;
-		}
+		height: 100%;
 	}
-
-	&__pattern-background {
-		background-color: #fff;
-		height: 45vh;
-
-		@include breakpoint(small only) {
-			height: 32vh;
-		}
-
-		#{$this}--center-content & {
-			@include breakpoint(medium down) {
-				height: auto;
-			}
-		}
-
-		#{$this}--center-content-logo & {
-			@include breakpoint(medium down) {
-				height: auto;
-			}
-		}
-
-		#{$this}--equal-padding & {
-			@include breakpoint(medium down) {
-				height: 20vh;
-			}
-
-			@include breakpoint(small only) {
-				height: 15vh;
-			}
-		}
-	}
-
-	// Photo Content
-
-	&__pc {
-		padding: 2.5rem 4.16% 2.5rem 8.33%;
+	&__full-bgImg {
+		height: 100%;
+		width: 100%;
 		position: relative;
-		z-index: 2;
-
-		@include breakpoint(medium down) {
-			padding: 3rem 0;
-		}
-
-		#{$this}--equal-padding & {
-			padding: 5rem 8.33% 20rem;
-
-			@include breakpoint(1366 down) {
-				padding: 5rem 8.33% 18rem;
-			}
-
-			@include breakpoint(medium down) {
-				padding: 5rem 0;
-				text-align: center;
-			}
-		}
-	}
-
-	&__pc-image {
-		@include breakpoint(medium down) {
-			margin-top: 3rem;
-		}
-
-		#{$this}--equal-padding & {
-			text-align: right;
-
-			@include breakpoint(medium down) {
-				text-align: center;
-			}
-		}
-	}
-
-	&__pc-content {
-		padding-right: 5rem;
-
-		@include breakpoint(medium down) {
-			padding-right: 0;
-		}
-	}
-
-	&__pc-title {
-		color: #000;
-		font-family: $font-ubuntu-regular;
-		font-size: 6.6rem;
-		line-height: 1;
-		margin-bottom: 0;
-
-		@include breakpoint(medium down) {
-			font-size: 5.4rem;
-			text-align: center;
-		}
-	}
-
-	&__pc-text {
-		margin-top: 1.5rem;
-
-		@include breakpoint(medium down) {
-			text-align: center;
-		}
-	}
-
-	&__pc-link {
-		margin-top: 1.9rem;
-
-		@include breakpoint(medium down) {
-			text-align: center;
-		}
-	}
-
-	&__cl-content {
-		margin-top: 2rem;
-		bottom: 0;
-		position: relative;
-		@include breakpoint (medium down) {
-			bottom: -11.2rem;
-		}
-		p {
-			max-width: 50rem;
-			margin: 0 auto;
-			@include breakpoint (small only) {
-				max-width: 25rem;
-			}
-		}
-	}
-
-	&__cl-image {
-		@include breakpoint (large down) {
-			position: relative;
-			bottom: -2rem;
-		}
-		@include breakpoint (medium down) {
-			bottom: 0;
-		}
-	}
-
-
-	&__cc {
-		margin-top: -5rem;
-		position: relative;
-
-		@include breakpoint(small only) {
-			margin-top: 0;
-			padding: 3rem 0 8rem;
-		}
-
-		#{$this}--height-auto & {
-			margin-top: 0;
-			padding: 10rem 0 15rem;
-
-			@include breakpoint(small only) {
-				padding: 3rem 0 8rem;
-			}
-		}
-
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		&::after {
 			content: '';
+			background-color: rgba(0,0,0,0.4);
+			height: 100%;
+			width: 100%;
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: rgba(0,0,0,.4);
-			height: 100%;
-			width: 100%;
-			z-index: 1;
 		}
 	}
-
-	&__cc-cover {
+	&__full-grid {
+		height: 100%;
+	}
+	&__full-content {
 		position: relative;
-    background-size: cover !important;
-	}
-
-	&__cc-content {
-		@include breakpoint (1600 up) {
-			padding-bottom: 5rem;
+		z-index: 1;
+		h1 {
+			color: $white;
+			font-family: $font-roboto-medium;
+			font-size: 6.2rem;
+			line-height: 1.2;
 		}
-	}
-
-	&__cc-title {
-		color: #fff;
-		font-family: $font-roboto-bold;
-		font-size: 6.6rem;
-		line-height: 1.1;
-		margin-bottom: 0;
-		padding: 0 16%;
-
-		@include breakpoint(1280 down) {
-			padding: 0 14%;
-		}
-
-		@include breakpoint(large down) {
-			padding: 0 4%;
-		}
-
-		@include breakpoint(medium down) {
-			font-size: 5.4rem;
-			padding: 0;
-		}
-	}
-
-	&_cc-content {
-		@include breakpoint(1280 up) {
-			padding-bottom: 5rem;
-		}
-	}
-
-	&__cc-text {
-		margin-top: 1rem;
-		padding: 0 24%;
-		
 		p {
-			color: #fff;
-		}
-
-		@include breakpoint(1280 down) {
-			padding: 0 22%;
-		}
-
-		@include breakpoint(large down) {
-			padding: 0 16%;
-		}
-
-		@include breakpoint(medium down) {
-			padding: 0;
+			color: $white;
+			font-family: $font-gotham-medium;
+			line-height: 1.2;
 		}
 	}
-
-	&__cc-link {
-		a {
-			background-color: #F15922;
-			border: .1rem solid #F15922;
-			color: #fff;
-			text-transform: none;
-			font: $font-ubuntu-regular;
-			&:hover {
-				border-color: transparent;
-				color: #000;
-			}
-		}
-	}
-
-	&__cc-grid {
-		position: relative;
-		z-index: 2;
+	&__full-cta {
+		margin: 3rem 0 0;
 	}
 }

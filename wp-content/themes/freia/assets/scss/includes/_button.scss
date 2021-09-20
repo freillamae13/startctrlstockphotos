@@ -1,41 +1,24 @@
 .button {
-	background-color: #F9880D;
-	border: 0.1rem solid #F9880D;
-	border-radius: 2.8rem;
-	color: #fff;
+	background-color: $orange;
+	border: 0.1rem solid $orange;
+	border-radius: 0;
+	color: $white;
 	display: inline-block;
-	font-family: $font-ubuntu-regular;
-	font-size: 1.8rem;
+	font-family: $font-gotham-medium;
+	font-size: 1.4rem;
 	letter-spacing: 0.1rem;
 	line-height: 1;
-	padding: 1.2rem 6rem;
+	padding: 1.5rem 3rem;
 	text-transform: uppercase;
 
 	@include transition(all 0.4s ease);
 
 	&:hover {
-		background-color: #fff;
-		color: #F9880D;
+		background-color: $white;
+		color: $orange;
 	}
 
-	&--outline {
-		background-color: transparent;
-		color: #F9880D;
-
-		&:hover {
-			background-color: #F9880D;
-			color: #fff;
-		}
-	}
-
-	&--yellow {
-		background-color: #FEC628;
-		border-color: #FEC628;
-		color: #262626;
-
-		&:hover {
-			background-color: lighten(#FEC628, 15%);
-			border-color: lighten(#FEC628, 15%);
-		}
+	&:focus {
+		color: $orange;
 	}
 }

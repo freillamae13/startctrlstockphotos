@@ -1,7 +1,7 @@
 .header {
 	$this: &;
 
-	background-color: #fff;
+	background-color: $white;
 	box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05%);
 	left: 0;
 	height: 10rem;
@@ -37,13 +37,13 @@
 		li {
 			color: #000;
 			display: inline-block;
-			font-family: $font-roboto-bold;
+			font-family: $font-roboto-regular;
 			font-weight: bold;
 			font-size: 1.4rem;
 			letter-spacing: 0.1rem;
 			line-height: 1;
 			margin-right: 3rem;
-			text-transform: none;
+			text-transform: lowercase;
 
 			a {
 				color: inherit;
@@ -57,27 +57,27 @@
 			&#{$this}__menu-cta {
 				a {
 					&.button {
-						color: #fff;
+						color: $white;
 
 						&:hover {
-							color: #f9880d;
+							color: $orange;
 						}
 					}
 
 					&.button--outline {
-						color: #f9880d;
+						color: $orange;
 
 						&:hover {
-							color: #fff;
+							color: $white;
 						}
 					}
 
 					&.button--yellow {
-						color: #fff;
+						color: $white;
 	
 						&:hover {
 							background-color: transparent;
-							color: #FEC628;
+							color: $orange;
 						}
 					}
 				}

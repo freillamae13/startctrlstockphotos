@@ -1,44 +1,7 @@
 .footer {
 	$this: &;
 	
-	background-color: #FEC628;
+	background-color:$orange;
 	padding: 15rem 0 3rem;
 
-	@include breakpoint(medium down) {
-		padding: 3rem 0;
-	}
-
-	&__social {
-		margin-bottom: 3rem;
-
-		li {
-			color: #000;
-			display: inline-block;
-			font-size: 1.8rem;
-			line-height: 1;
-			list-style: none;
-			margin-right: 2.5rem;
-
-			a {
-				color: inherit;
-				font: inherit;
-
-				@include transition(all 0.4s ease);
-
-				&:hover {
-					color: lighten(#000, 30%);
-				}
-			}
-
-			&:last-of-type {
-				margin-right: 0;
-			}
-		}
-	}
-
-	&__copyright {
-		p {
-			font-size: 1.4rem;
-		}
-	}
 }
