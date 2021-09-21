@@ -8,7 +8,7 @@
 
 <section class="banner">
 	<div class="banner__full banner__full-center">
-		<div class="banner__full-bgImg" style="background-image:url(http://startctrlstockphotos.mae/wp-content/uploads/2021/09/cropped-banner-people.png);">
+		<div class="banner__full-bgImg" style="background-image:url(http://startctrlphotos.bryanalano.com/wp-content/uploads/2021/09/banner-people-1.jpg);">
 			<div class="banner__full-grid grid-x align-center align-middle grid-container">
 				<div class="banner__full-content text-center cell small-12 large-12">
 					<h1>startctrl</h1>
